@@ -7,13 +7,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.ApplicationContext;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-import java.util.Arrays;
 import java.util.Optional;
 
+
+@EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
 @SpringBootApplication // extends WebSecurityConfigurerAdapter
 public class DemoApplication implements CommandLineRunner { //implements CommandLineRunner
 

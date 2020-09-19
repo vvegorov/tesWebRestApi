@@ -1,15 +1,12 @@
 package com.example.demo.Controller;
 
 import com.example.demo.Model.EmployeeEntity;
-import com.example.demo.Model.UserProfile;
 import com.example.demo.Service.EmployeeService;
 import com.example.demo.exception.RecordNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
